@@ -45,7 +45,7 @@
     <!--[if lt IE 8]> <script> if (document.compatMode && document.documentMode) { alert("Your Browser has enabled the Compatibility View, please disable this mode."); } </script> <![endif]-->
     <!--[if IE 8]> <script type="text/javascript" src="/v_11037721693474/system/master/js/html5shiv.js"></script> <![endif]-->
     <script type="text/javascript" src="https://www.allianz.com/v_11037721693474/system/master/js/modernizr.js"></script>
-    <script src="https://rnrdemo1.herokuapp.com/js/src/apiService.js"></script>
+    <!--<script src="https://aqueous-plains-58227.herokuapp.com/js/src/apiService.js"></script>-->
     <script type="text/javascript"> /* Google Analytics data */ var dataLayer = [{ 'global_ua': '', 'global_domain': '', 'local_ua': '', 'local_domain': '', 'cross_domain': '' }]; </script>
     <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-5XG3268');</script>
     <style>
@@ -1455,35 +1455,7 @@
                         else
                             $("div[role='navigation'] a").attr("data-content", `<iframe id='iChatPopup' src='http://ec2-18-232-207-49.compute-1.amazonaws.com:7000/?popup=1&search=' height='530' width='300' style='border:none'></iframe>`)
                         console.log('before CallPhone --- ');
-
-                        let msg_container = $("#iChatPopup").contents().find('body div.chat-body');
-                        msg_container.find("h1").addClass('hidden');
-                        msg_container.find("div.chat-text-para").addClass('hidden');
-                        msg_container.find(".header-text-logo").removeClass('hidden');
-                        msg_container.find("ul").removeClass('hidden');
-                        msg_container.find("ul").append(`<li class="animated fadeInLeft list-group-item background-color-custom">
-                                    <table border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                    <td style="vertical-align:top;">
-                                    <img width="35" height="35" class="bot-logo-image"/></td>
-                                    <td><div class="media-body bot-txt-space">
-                                    <p class="list-group-item-text-bot">Hi, I’m Ally, your assistant in Allianz. Looks like you are interested in home insurance. Would you like to take a look?</p>
-                                    <p class="bot-res-timestamp"><small> <img style="border-radius:50%;border:2px solid white;" width="20" height="20" src='${settings.botAvatar}'/>${utils.currentTime()}</small></p>
-                                    </div></td>
-                                    </tr>
-                                    </table></li>`);
-                        var processor = apiService();
-                        processor.askBot("Getting a quote", "Getting a quote", function (error, html) {
-                            if (error) {
-                                console.log("error");
-                            } else {
-                                console.log("++++++++++++>>>>>>>>>>>>");
-                                console.log(html);
-                            }
-
-                        });
-
-                        /*utils.initiateAjax("/callPhone", "POST", "", function (data, err) {
+                        utils.initiateAjax("/callPhone", "POST", "", function (data, err) {
                             console.log('CallPhone --- ', JSON.stringify(data));
                             let statusm = data.result[0];
                             let title = statusm["u_title"];
@@ -1536,7 +1508,7 @@
 										  </table></li>`);
                                 }
                             }, 2000)
-                        });*/
+                        });
                     }
                     else {
                         captureTranscript();
@@ -1612,7 +1584,32 @@
                     var setMsgTimer = setTimeout(function () {
 
                         if (manualPopup == false) {
+                            let msg_container = $("#iChatPopup").contents().find('body div.chat-body');
+                            msg_container.find("h1").addClass('hidden');
+                            msg_container.find("div.chat-text-para").addClass('hidden');
+                            msg_container.find(".header-text-logo").removeClass('hidden');
+                            msg_container.find("ul").removeClass('hidden');
+                            msg_container.find("ul").append(`<li class="animated fadeInLeft list-group-item background-color-custom">
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                    <td style="vertical-align:top;">
+                                    <img width="35" height="35" class="bot-logo-image"/></td>
+                                    <td><div class="media-body bot-txt-space">
+                                    <p class="list-group-item-text-bot">Hi, I’m Ally, your assistant in Allianz. Looks like you are interested in home insurance. Would you like to take a look?</p>
+                                    <p class="bot-res-timestamp"><small> <img style="border-radius:50%;border:2px solid white;" width="20" height="20" src='${settings.botAvatar}'/>${utils.currentTime()}</small></p>
+                                    </div></td>
+                                    </tr>
+                                    </table></li>`);
+                            var processor = apiService();
+                            processor.askBot("home insurance", "home insurance", function (error, html) {
+                                if (error) {
+                                    console.log("error");
+                                } else {
+                                    console.log("++++++++++++>>>>>>>>>>>>");
+                                    console.log(html);
+                                }
 
+                            });
                         }
 
                     }, 11000);
