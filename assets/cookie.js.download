@@ -1,0 +1,18 @@
+
+window.onload = function() {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src = "https://www.allianz.com/tools/hpto/hpto.js";
+	document.head.appendChild(script);
+
+    window.cookieconsent_options = {"message":"We use cookies in order to provide you with a user-friendly, safe and effective website. By default, the cookie settings on this website are set to \"Allow all cookies\". If you continue on this site, you consent to this.","dismiss":"Ok","learnMore":"Please visit our Privacy Statement if you want to learn more about our privacy and cookie policy.","link":"https://www.allianz.com/en/info/data_privacy/privacy-statement.html/","theme":"https://www.allianz.com/tools/cookie/cookie.css"};
+    if(location.pathname.substr(0, 3) == "/de") {
+        window.cookieconsent_options = {"message":"Wir verwenden Cookies, um Ihnen eine nutzerfreundliche, sichere und wirksame Nutzung unserer Website zu ermöglichen. Die Cookie-Einstellungen dieser Website sind automatisch auf „Alle Cookies Zulassen“ gesetzt. Wenn Sie diese Website weiter benutzen, erklären Sie sich damit einverstanden.","dismiss":"Ok","learnMore":"Bitte rufen Sie unsere Datenschutzprinzipien auf, wenn Sie mehr über unsere Datenschutz- und Cookie Grundsätze erfahren möchten.","link":"https://www.allianz.com/de/info/datenschutz/datenschutz.html/","theme":"https://www.allianz.com/tools/cookie/cookie.css"};
+    }
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "https://www.allianz.com/tools/cookie/cookieconsent.min.js";
+    document.head.appendChild(s);
+    
+};
+
