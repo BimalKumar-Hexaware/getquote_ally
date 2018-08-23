@@ -1584,6 +1584,17 @@
                     var setMsgTimer=setTimeout(function () {
 			
 			    if(manualPopup == false){
+                    console.log("msg_container", msg_container);
+                    var processor = apiService();
+                    processor.askBot("Getting a quote", "Getting a quote", function (error, html) {
+                        if(error){
+                        console.log("error");
+                        }else{
+                            console.log("++++++++++++>>>>>>>>>>>>");
+                        console.log(html);
+                        }
+                        
+                    });
                     let msg_container = $("#iChatPopup").contents().find('body div.chat-body');
                                 msg_container.find("h1").addClass('hidden');
                                 msg_container.find("div.chat-text-para").addClass('hidden');
@@ -1599,18 +1610,7 @@
                                     <p class="bot-res-timestamp"><small> <img style="border-radius:50%;border:2px solid white;" width="20" height="20" src='${settings.botAvatar}'/>${utils.currentTime()}</small></p>
                                     </div></td>
                                     </tr>
-                                    </table></li>`);
-                                console.log("msg_container", msg_container);
-			    var processor = apiService();
-			     processor.askBot("Getting a quote", "Getting a quote", function (error, html) {
-				     if(error){
-				     console.log("error");
-				     }else{
-					     console.log("++++++++++++>>>>>>>>>>>>");
-				     console.log(html);
-				     }
-				     
-			     });
+                                    </table></li>`);                                
 		    }
 			    
                     },11000);
