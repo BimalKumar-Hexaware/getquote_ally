@@ -86,7 +86,7 @@ app.get('/chatwindow', function (req, res) {
 
 app.get('/chatvisitor', function (req, res) {
   
-    res.sendfile(__dirname + '/allianz-visitor.html');
+    res.sendfile(__dirname + '/allainz-auto.html');
 });
 
 app.get('/roaming', function (req, res) {

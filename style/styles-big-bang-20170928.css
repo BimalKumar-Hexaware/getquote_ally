@@ -1,0 +1,141 @@
+
+.starburst {
+    width: 345px;
+    height: 345px;
+    border-radius: 345px;
+    margin: -15px -50px 0 0;
+    float: right;
+}
+.starburst.left {
+    margin: -25px 0 0 0;
+    float: left;
+    text-align: center;
+}
+.starburst.left > .win-text {
+    margin-top: 32px;
+}
+.starburst > .win-text {
+    margin-top: 45px;
+}
+.starburst > .win-text > .win-action{
+    font-family: "AllianzSansBold";
+    font-size: 15px;
+    color: white;
+    line-height: 1;
+    margin: 15px 0 0 0;
+}
+.starburst.left > .win-text > .win-action{
+    margin: 4px 0 8px 0;
+}
+@media (min-width: 767px) and (max-width: 889px){
+    .starburst.left{
+        margin: -57px  0 0 0;
+    }
+}
+.starburst .main-text {
+    height: 240px;
+}
+.starburst.light-blue {
+    background: rgba(173, 216, 230, 0.85);
+}
+.starburst.green {
+    background: rgba(109, 185, 132, 0.85);
+}
+.starburst.blue {
+    background: rgba(0, 55, 129, 0.85);
+}
+.starburst .product-heading {
+    font-family: "AllianzSansBold";
+    color: white;
+    text-transform: uppercase;
+    padding: 17px;
+    font-size: 15px;
+}
+.starburst .product-subheading {
+    font-family: "AllianzSansBold";
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 25px;
+}
+.terms-link {
+    float: left;
+    font-family: AllianzSansRegular;
+    text-align: center;
+    width: 345px;
+    margin: 5px 0 0 0;
+    font-size: 12px;
+}
+.terms-link a {
+    color: white;
+    text-decoration: none;
+}
+.terms-link-mobile {
+    font-family: AllianzSansRegular;
+    margin: 2px 0 0 12px;
+}
+.terms-link-mobile a {
+    color: white;
+    text-decoration: none;
+}
+.inspired {
+    font-family: "AllianzInspired";
+}
+.starburst .inspired.heading {
+    font-size: 88px;
+    color: white;
+    line-height: 75%;
+    margin: 10px
+}
+.starburst .inspired.subheading {
+    font-size: 24px;
+    color: white;
+    line-height: 100%;
+    margin: 5px 0 0 0;
+    height: 43px;
+}
+.header.global .h1.big-bang-mobile-h1 {
+    font-size: 23px;
+    color: white;
+    margin-bottom: 6px;
+}
+.big-bang-mobile-h2 {
+    margin-top: 0;
+}
+.btn-default:active:hover{
+    color: white;
+}
+.banner-box-retrieve {
+    float: right;
+    text-align: right;
+    margin: 15px 0 0 0;
+    font-size: 14px;
+    line-height: 1;
+}
+.banner-box-retrieve a {
+    text-decoration: underline;
+}
+.banner-box {
+    width: 100%;
+    background-color: #017185;
+    padding: 15px 15px 10px 26px;
+    font-family: AllianzSansRegular;
+}
+.banner-box .banner-box-conditions {
+    float: left;
+    margin-top: 15px;
+}
+.banner-box-retrieve-option-b {
+    font-family: AllianzSansRegular;
+    color: white;
+    margin: 5px 0 0 0;
+    text-decoration: underline;
+}
+.banner-box-retrieve-option-b a {
+    color: white;
+}
+.banner-box-retrieve-option-b a:hover {
+    color: white;
+}
+.starburst .btn.btn-orange {
+   line-height: 1.2;
+}
