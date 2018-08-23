@@ -6,7 +6,7 @@
 <!--[if IE 9]> <html class="no-js not-ready not-loaded" lang="en" dir="ltr"> <![endif]-->
 
 <head>
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>House and home - Products | Allianz</title>
     <link rel="shortcut icon" href="/v_11037721693474/system/master/images/favicon.ico" type="image/x-icon" />
@@ -1438,7 +1438,7 @@
         require(['jquery'], function ($) {
             require(['bootstrap', 'apiService', 'utils', 'settings', 'moment', 'jqueryscoped', 'Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
                 $.scoped();
-		    var manualPopup=false,autoPop=false;
+                var manualPopup = false, autoPop = false;
                 var today = Math.round((new Date()).getTime() / 1000);
                 var chatTranscript = [];
                 $("a.popover-html1").unbind().click(function (event) {
@@ -1534,16 +1534,16 @@
                         return false;
                     }
                 })
-		   $("a#btn-send-message").click(function (e) {
-			if(autoPop == false){
-				manualPopup=true;	
-			}
+                $("a#btn-send-message").click(function (e) {
+                    if (autoPop == false) {
+                        manualPopup = true;
+                    }
 
-        	});
-		    
+                });
+
                 $(function () {
                     var today = Math.round((new Date()).getTime() / 1000);
-                   
+
                     $('[data-toggle="popover"]').popover();
                     var processor = apiService();
                     let url = new URL(window.location.href);
@@ -1551,18 +1551,18 @@
                     utils.initiateAjax("/updateSessionState", "POST", { params: params, sessionId: localStorage.getItem('uuid') }, function (data, err) {
                     });
                     console.log(">>>>>>>>>>>>>>>>>>>>>>>>>tester");
-                 
-                    var popupTimer=setTimeout(function () {
+
+                    var popupTimer = setTimeout(function () {
                         console.log("testerasdasd<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
-			    autoPop=true;
-			 
-			    if(manualPopup == false){
-                        window.parent.document.getElementById('btn-send-message').click();
-			    }
-			  //  $('[data-toggle="popover"]').popover("show");  
-                    //     var iframe = document.getElementById('iChatPopup');
-                    // var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-                    // var div1 = innerDoc.getElementById('msg_container');console.log(div1);
+                        autoPop = true;
+
+                        if (manualPopup == false) {
+                            window.parent.document.getElementById('btn-send-message').click();
+                        }
+                        //  $('[data-toggle="popover"]').popover("show");  
+                        //     var iframe = document.getElementById('iChatPopup');
+                        // var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        // var div1 = innerDoc.getElementById('msg_container');console.log(div1);
                         // let msg_container = innerDoc.getElementsByTagName("body").getElementsByTagName("div").getElementsByClassName("chat-body");
                         //         msg_container.find("h1").addClass('hidden');
                         //         msg_container.find("div.chat-text-para").addClass('hidden');
@@ -1580,27 +1580,16 @@
                         //                     </tr>
                         //                   </table></li>`);
 
-                    }, 10000);  
-                    var setMsgTimer=setTimeout(function () {
-			
-			    if(manualPopup == false){
-                    console.log("msg_container", msg_container);
-                    var processor = apiService();
-                    processor.askBot("Getting a quote", "Getting a quote", function (error, html) {
-                        if(error){
-                        console.log("error");
-                        }else{
-                            console.log("++++++++++++>>>>>>>>>>>>");
-                        console.log(html);
-                        }
-                        
-                    });
-                    let msg_container = $("#iChatPopup").contents().find('body div.chat-body');
-                                msg_container.find("h1").addClass('hidden');
-                                msg_container.find("div.chat-text-para").addClass('hidden');
-                                msg_container.find(".header-text-logo").removeClass('hidden');
-                                msg_container.find("ul").removeClass('hidden');
-                                msg_container.find("ul").append(`<li class="animated fadeInLeft list-group-item background-color-custom">
+                    }, 10000);
+                    var setMsgTimer = setTimeout(function () {
+
+                        if (manualPopup == false) {
+                            let msg_container = $("#iChatPopup").contents().find('body div.chat-body');
+                            msg_container.find("h1").addClass('hidden');
+                            msg_container.find("div.chat-text-para").addClass('hidden');
+                            msg_container.find(".header-text-logo").removeClass('hidden');
+                            msg_container.find("ul").removeClass('hidden');
+                            msg_container.find("ul").append(`<li class="animated fadeInLeft list-group-item background-color-custom">
                                     <table border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                     <td style="vertical-align:top;">
@@ -1610,10 +1599,21 @@
                                     <p class="bot-res-timestamp"><small> <img style="border-radius:50%;border:2px solid white;" width="20" height="20" src='${settings.botAvatar}'/>${utils.currentTime()}</small></p>
                                     </div></td>
                                     </tr>
-                                    </table></li>`);                                
-		    }
-			    
-                    },11000);
+                                    </table></li>`);
+                            console.log("msg_container", msg_container);
+                            var processor = apiService();
+                            processor.askBot("Getting a quote", "Getting a quote", function (error, html) {
+                                if (error) {
+                                    console.log("error");
+                                } else {
+                                    console.log("++++++++++++>>>>>>>>>>>>");
+                                    console.log(html);
+                                }
+
+                            });
+                        }
+
+                    }, 11000);
                 });
                 function captureTranscript() {
                     var iframe = document.getElementById('iChatPopup');
@@ -1650,8 +1650,7 @@
                             }
                             chatTranscript.push(objArr);
                         } else {
-                            if(typeof userObj[0] != 'undefined')
-                            {
+                            if (typeof userObj[0] != 'undefined') {
                                 console.log(userObj[0].innerHTML);
                                 console.log("-----User", index);
                                 objArr.User = $.trim(userObj[0].innerHTML);
