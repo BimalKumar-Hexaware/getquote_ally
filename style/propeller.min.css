@@ -310,11 +310,11 @@ h2.pmd-card-title-text {
 }
 
 .pmd-card-actions .btn:first-child {
-    margin-left: 12px
+    /*margin-left: 12px*/
 }
 
 .pmd-card-actions .btn:last-child {
-    margin-right: 12px
+    /*margin-left: 12px*/
 }
 
 .pmd-card-actions .btn.pmd-btn-flat {
@@ -917,7 +917,7 @@ h2.pmd-card-title-text {
 .dropdown-toggle.btn-default.disabled,
 .dropdown-toggle.btn-default:disabled,
 .dropdown-toggle.btn-default[disabled] {
-    background-color: #b3b3b3
+    background-color: #f5f6f6
 }
 
 .btn-default .ink,
@@ -956,7 +956,7 @@ h2.pmd-card-title-text {
 
 .btn-primary,
 .dropdown-toggle.btn-primary {
-    background-color: #00a3ad
+    background-color: #003781
 }
 
 .btn-primary:hover,
@@ -982,7 +982,7 @@ h2.pmd-card-title-text {
 .dropdown-toggle.btn-primary.disabled,
 .dropdown-toggle.btn-primary:disabled,
 .dropdown-toggle.btn-primary[disabled] {
-    background-color: #b3b3b3
+    background-color: #f5f6f6
 }
 
 .btn-primary .ink,
@@ -1056,7 +1056,7 @@ h2.pmd-card-title-text {
 .dropdown-toggle.btn-success.disabled,
 .dropdown-toggle.btn-success:disabled,
 .dropdown-toggle.btn-success[disabled] {
-    background-color: #b3b3b3
+    background-color: #f5f6f6
 }
 
 .btn-success .ink,
@@ -1130,7 +1130,7 @@ h2.pmd-card-title-text {
 .dropdown-toggle.btn-info.disabled,
 .dropdown-toggle.btn-info:disabled,
 .dropdown-toggle.btn-info[disabled] {
-    background-color: #b3b3b3
+    background-color: #f5f6f6
 }
 
 .btn-info .ink,
@@ -1204,7 +1204,7 @@ h2.pmd-card-title-text {
 .dropdown-toggle.btn-warning.disabled,
 .dropdown-toggle.btn-warning:disabled,
 .dropdown-toggle.btn-warning[disabled] {
-    background-color: #b3b3b3
+    background-color: #f5f6f6
 }
 
 .btn-warning .ink,
@@ -1278,7 +1278,7 @@ h2.pmd-card-title-text {
 .dropdown-toggle.btn-danger.disabled,
 .dropdown-toggle.btn-danger:disabled,
 .dropdown-toggle.btn-danger[disabled] {
-    background-color: #b3b3b3
+    background-color: #f5f6f6
 }
 
 .btn-danger .ink,

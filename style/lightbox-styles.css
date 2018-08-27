@@ -14,16 +14,16 @@
 
 #lightbox-panel p{ font-weight:normal; font-size:14px; line-height:1.1; font-weight:normal; font-style:normal }
 
-#lightbox-panel h1{ font-family: "optus_voice_betabold"; max-width:600px; font-size:3.5em; line-height:1; color:#00A3AD; }
-#lightbox-panel h2{ font-family: 'TradeGothicLTPro-BdCn20',Arial,sans-serif; text-transform:uppercase; color:#00A3AD; font-size:2em !important;  }
+#lightbox-panel h1{ font-family: "optus_voice_betabold"; max-width:600px; font-size:3.5em; line-height:1; color:#003781; }
+#lightbox-panel h2{ font-family: 'TradeGothicLTPro-BdCn20',Arial,sans-serif; text-transform:uppercase; color:#003781; font-size:2em !important;  }
 #lightbox-panel h3{ font-family: 'TradeGothicLTPro-BdCn20',Arial,sans-serif !important; color:#000; font-size:1.8em; text-align:left; font-weight:normal }
 
 #lightbox-panel ul { margin:0 0 0 1em; list-style:disc inside; padding:0;   } 
-#lightbox-panel ul li { color:#00A3AD; margin:0 1em 0 0; line-height:1.5; font-size:14px} 
+#lightbox-panel ul li { color:#003781; margin:0 1em 0 0; line-height:1.5; font-size:14px} 
 #lightbox-panel ul li span{ color:#000; } 
 
 
-#close-lightbox{float:right !important; font-family: Arial,sans-serif; font-size:2em; font-weight:bold;  color:#00A3AD;}
+#close-lightbox{float:right !important; font-family: Arial,sans-serif; font-size:2em; font-weight:bold;  color:#003781;}
 
 #lightbox-panel img{float:right; width:35%; margin-left:30px; }
 

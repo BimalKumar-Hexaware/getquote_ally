@@ -44,4 +44,4 @@ ul.no-style, .footer-links ul, ol.no-style {list-style: none;padding: 0;margin-l
 #chatButton.disabled .uppercase, #chatButton.disabled .ico{ color:#aaa; }
 #chatButton.notavailable .colorbullet{background:#ffd100;}
 #chatButton.busy .colorbullet{background:red}
-#chatButton.available .colorbullet{background:#00a3ad}
+#chatButton.available .colorbullet{background:#003781}
